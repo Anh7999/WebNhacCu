@@ -1,0 +1,50 @@
+﻿@model IEnumerable< web12.Models.newarrival>
+
+  
+  @foreach (var i in Model)
+            {
+            <h3>Sản Phẩm Mới</h3>
+          
+            <div class="new_grids">
+                <div class="col-md-4 new-gd-left">
+                    <img src="~/Content/images/anh/@i.img" alt=" " />
+                    <div class="wed-brand simpleCart_shelfItem">
+                        <h4>@i.name</h4>
+                        <h5>@i.status</h5>
+                        <p><i>@i.pire</i> <span class="item_price"></span><a class="item_add hvr-outline-out button2" href="#">add to cart </a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 new-gd-middle">
+                    <div class="new-levis">
+                        <div class="mid-img">
+                            <img src="~/Content/images/anh/@i.img" alt=" " />
+                        </div>
+                        <div class="mid-text">
+                            <h4>@i.sell <span>off</span></h4>
+                            <a class="hvr-outline-out button2" href="product.html">Shop now </a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="new-levis">
+                        <div class="mid-text">
+                            <h4>@i.pire <span>off</span></h4>
+                            <a class="hvr-outline-out button2" href="product.html">Shop now </a>
+                        </div>
+                        <div class="mid-img">
+                            <img src="~/Content/images/anh/@i.img" alt=" " />
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-4 new-gd-left">
+                    <img src="~/Content/images/anh/@i.img" alt=" " />
+                    <div class="wed-brandtwo simpleCart_shelfItem">
+                        <h4>@i.name</h4>
+                        <p>@i.name</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            }
+     

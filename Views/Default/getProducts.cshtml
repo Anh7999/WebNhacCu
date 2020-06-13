@@ -1,0 +1,33 @@
+﻿@model List<web12.Models.product>
+@foreach (var i in Model)
+{
+    <tr class="rem1">
+        <td class="invert-closeb">
+            <div class="rem">
+                <div class="close1"> </div>
+            </div>
+            <script>
+            $(document).ready(function(c) {
+								$('.close1').on('click', function(c){
+									$('.rem1').fadeOut('slow', function(c){
+										$('.rem1').remove();
+									});
+									});
+								});
+            </script>
+        </td>
+        <td class="invert-image"><a href="/Gio_Hang"><img src="~/Content/images/anh/@i.img" alt=" " class="img-responsive" /></a></td>
+        <td class="invert">
+            <div class="quantity">
+                <div class="quantity-select">
+                    <div class="entry value-minus">&nbsp;</div>
+                    <div class="entry value"><span>1</span></div>
+                    <div class="entry value-plus active">&nbsp;</div>
+                </div>
+            </div>
+        </td>
+        <td class="invert">@i.name</td>
+        <td class="invert">@i.price</td>
+    </tr>
+}
+
